@@ -6,7 +6,12 @@ function Greetings(greet) {
         var lowerObj = name.toLowerCase()
 
         if (objMap[lowerObj] === undefined) {
-            objMap[lowerObj] = 0;
+            objMap[lowerObj] = 1;
+        }
+        else{
+
+            objMap[lowerObj] += 1;
+
         }
     }
 
@@ -32,7 +37,6 @@ function Greetings(greet) {
 
     function errorHandling(name, lang) {
         
-         }
         if (!name) {
             return "Please enter the name"
         }
@@ -41,6 +45,7 @@ function Greetings(greet) {
         } 
         if (!name && !lang) {
             return "Please enter the name and select language"
+        }
     }
 
 

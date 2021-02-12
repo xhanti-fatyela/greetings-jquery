@@ -47,3 +47,13 @@ body {
 	position:relative;
 	top:1px;
 }
+
+.greetMessage{
+
+    font-size: x-large;
+}
+
+.greetText{
+    border-radius: 5px;
+    font-size: 25px;
+}
