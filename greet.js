@@ -22,17 +22,25 @@ $(function () {
             localStorage.setItem('names', JSON.stringify(greetedNames.getNames()));
         }
 
-        $(".resetBtn").on("click", function () {
-
-            localStorage.clear();
-            
-
+        $(".listallBtn").on("click", function () {
+            const names = greetedNames.getNames()
+          for (var name in names){
+              const perName = name
+              const perCount = names[perName]
+              $(".listOfnames").append("<div>" + PerName + "has been greeted" + perCount + " times" + "</div>")
+          } 
+            // $(".names").html(JSON.stringify(greetedNames.getNames()))
+        
 
         })
 
-        $(".listallBtn").on("click", function () {
+        $(".resetBtn").on("click", function () {
 
-            $(".names").html(JSON.stringify(greetedNames.getNames()))
+            localStorage.clear();
+            // greetedNames.resetBtn()
+            location.reload()
+
+
 
         })
 
